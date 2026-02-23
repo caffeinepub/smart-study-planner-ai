@@ -1,0 +1,198 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Smart Study Planner AI - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create homepage with title, tagline, and navigation",
+      "acceptanceCriteria": [
+        "Homepage displays 'Smart Study Planner AI' as the main title",
+        "Tagline clearly describes the AI study planning purpose",
+        "Navigation bar is present and functional"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HomePage.tsx",
+          "operation": "create",
+          "description": "Create homepage component with hero section displaying 'Smart Study Planner AI' title, descriptive tagline about AI-powered study planning, and use the generated hero background image from frontend/public/assets/generated/hero-bg.dim_1920x1080.png as the section background"
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "create",
+          "description": "Create navigation bar component with links to main sections (Home, Create Plan, Progress, Motivation) using responsive design with mobile menu toggle"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire HomePage component and Navigation component into the main app, set up routing structure for all sections, and ensure Navigation appears on all pages"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create input form for study plan configuration",
+      "acceptanceCriteria": [
+        "Form accepts multiple subjects with individual exam dates",
+        "Daily available study hours input is present",
+        "Difficulty level selector is available for each subject",
+        "Form validates all required fields before submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/StudyPlanForm.tsx",
+          "operation": "create",
+          "description": "Create form component with dynamic subject fields (each containing subject name, exam date, difficulty level), daily available hours input, add/remove subject buttons, and form validation. Include calendar icon from frontend/public/assets/generated/calendar-icon.dim_128x128.png next to exam date inputs. Submit button triggers schedule generation"
+        },
+        {
+          "path": "frontend/src/hooks/useStudyPlanForm.ts",
+          "operation": "create",
+          "description": "Create custom hook to manage form state, validation logic, subject array operations (add/remove), and form submission handling"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for StudyPlanForm component at /create-plan path and link it in navigation"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create progress tracker with completion percentages",
+      "acceptanceCriteria": [
+        "Progress tracker shows overall completion percentage",
+        "Individual subject progress is tracked and displayed",
+        "Progress updates as tasks are marked complete",
+        "Visual representation (progress bar or similar) is clear and intuitive"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ProgressTracker.tsx",
+          "operation": "create",
+          "description": "Create progress tracker component displaying overall completion percentage and individual subject progress bars. Include progress icon from frontend/public/assets/generated/progress-icon.dim_128x128.png in the header. Fetch completion data from backend using calculateCompletionRate and getAllSessions methods"
+        },
+        {
+          "path": "frontend/src/components/SubjectProgressCard.tsx",
+          "operation": "create",
+          "description": "Create individual subject progress card component showing subject name, completion percentage, visual progress bar, and completed/total tasks count"
+        },
+        {
+          "path": "frontend/src/hooks/useProgressData.ts",
+          "operation": "create",
+          "description": "Create custom hook using React Query to fetch progress data from backend methods (calculateCompletionRate, getAllSessions) and handle real-time updates when sessions are completed"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for ProgressTracker component at /progress path and ensure it's accessible from navigation"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add motivational quote section",
+      "acceptanceCriteria": [
+        "Motivational quotes are displayed in a dedicated section",
+        "Quotes are relevant to studying and student motivation",
+        "Quote section is visually distinct and appealing"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/MotivationalQuotes.tsx",
+          "operation": "create",
+          "description": "Create motivational quotes component displaying student-focused quotes in a visually appealing card format with rotation or random selection functionality"
+        },
+        {
+          "path": "frontend/src/data/quotes.ts",
+          "operation": "create",
+          "description": "Create data file containing array of student-focused motivational quotes for studying, learning, and academic success"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add route for MotivationalQuotes component at /motivation path or integrate it into the homepage and progress pages as a sidebar/footer element"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Design student-friendly aesthetic with soft colors",
+      "acceptanceCriteria": [
+        "Color palette uses soft, non-harsh colors suitable for extended viewing",
+        "Design is clean, modern, and appealing to students",
+        "Visual hierarchy guides users naturally through the interface",
+        "Typography is readable and professional"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles with soft color palette (pastels or earth tones), define CSS custom properties for primary, secondary, and accent colors suitable for a calming study environment, and set typography with readable fonts"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with custom soft color palette (light blues, soft greens, warm beiges), rounded corner utilities, gentle shadow configurations, and calming typography settings"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Ensure full responsive design across all devices",
+      "acceptanceCriteria": [
+        "Layout adapts seamlessly to mobile, tablet, and desktop screen sizes",
+        "All interactive elements are touch-friendly on mobile devices",
+        "Text remains readable at all breakpoints",
+        "Navigation is accessible on all device sizes"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Implement responsive navigation with hamburger menu for mobile, full horizontal menu for desktop, and tablet-optimized layout using Tailwind responsive utilities"
+        },
+        {
+          "path": "frontend/src/components/StudyPlanForm.tsx",
+          "operation": "modify",
+          "description": "Apply responsive grid layouts that stack on mobile and display side-by-side on larger screens, ensure touch-friendly input sizes and spacing"
+        },
+        {
+          "path": "frontend/src/components/ProgressTracker.tsx",
+          "operation": "modify",
+          "description": "Implement responsive progress card grid that adapts from single column on mobile to multi-column on tablets and desktops"
+        },
+        {
+          "path": "frontend/src/components/HomePage.tsx",
+          "operation": "modify",
+          "description": "Apply responsive hero section scaling, adjust text sizes for mobile readability, and ensure background image scales appropriately"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Apply cohesive visual theme with warm educational aesthetic",
+      "acceptanceCriteria": [
+        "Visual theme is consistently applied across all pages and components",
+        "Color scheme evokes calm and focus appropriate for a study tool",
+        "Design elements support usability without distraction"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Implement comprehensive theme with warm earth tones and soft pastels, define rounded corner standards (border-radius values), gentle shadow utilities (box-shadow presets), and calming typography scale with focus on readability"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create layout wrapper component that applies consistent theme styling, padding, background colors, and structural elements across all pages to ensure visual cohesion"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routes with Layout component to ensure consistent theme application throughout the application"
+        }
+      ]
+    }
+  ]
+}

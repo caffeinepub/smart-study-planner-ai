@@ -1,0 +1,62 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-20T12:32:46.236Z",
+  "summary": "The implementation delivers a comprehensive Smart Study Planner AI application with all core requirements met. The frontend provides a clean homepage, input form, progress tracking, and motivational quotes with a student-friendly aesthetic. The backend implements study session management. However, the AI schedule generation is implemented client-side in TypeScript rather than in the backend Motoko actor as specified, and required images are not present in the diff (only referenced in code).",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "Implement an AI-based study schedule generator in the backend that automatically divides subjects based on priority and exam date, generates daily study tasks, and suggests revision days",
+      "reason": "The study schedule generation algorithm is implemented client-side in frontend/src/lib/studyPlanGenerator.ts as a TypeScript module, but REQ-3 specifies [backend] scope. The backend/main.mo actor only stores sessions but does not contain the AI scheduling logic that prioritizes subjects, generates tasks, or suggests revision days.",
+      "evidence": [
+        "frontend/src/lib/studyPlanGenerator.ts",
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Theme provider and dark mode support via next-themes",
+      "reason": "The BuildRequest does not mention dark mode or theme switching capabilities. The implementation includes ThemeProvider from next-themes in App.tsx and dark mode color definitions in index.css, which were not requested.",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ]
+    },
+    {
+      "description": "Internet Identity authentication integration",
+      "reason": "The BuildRequest constraints mention Internet Identity as an immutable path not to modify, but do not request authentication functionality. The implementation actively uses authentication hooks throughout the app (useActor, useInternetIdentity) and includes caller parameter in backend methods, suggesting authentication is a functional feature rather than just preserved boilerplate.",
+      "evidence": [
+        "frontend/src/hooks/useQueries.ts",
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.85,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/Navigation.tsx",
+    "frontend/src/components/SubjectProgressCard.tsx",
+    "frontend/src/data/quotes.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/studyPlanGenerator.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/HomePage.tsx",
+    "frontend/src/pages/MotivationalQuotes.tsx",
+    "frontend/src/pages/ProgressTracker.tsx",
+    "frontend/src/pages/StudyPlanForm.tsx",
+    "frontend/src/types/studyPlan.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

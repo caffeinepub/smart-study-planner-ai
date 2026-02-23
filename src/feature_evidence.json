@@ -1,0 +1,137 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-clean-homepage-with-a-title-displaying-smart-study-planner-ai-a-tagline-describing-the-ai-powered-study-planning-functionality-and-a-navigation-bar-for-site-sections",
+      "featureTitle": "Create a clean homepage with a title displaying 'Smart Study Planner AI', a tagline describing the AI-powered study planning functionality, and a navigation bar for site sections",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-an-input-form-where-students-can-enter-subjects-multiple-exam-date-for-each-subject-daily-available-study-hours-and-difficulty-level-for-each-subject",
+      "featureTitle": "Create an input form where students can enter: subjects (multiple), exam date for each subject, daily available study hours, and difficulty level for each subject",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-progress-tracker-that-displays-percentage-completion-for-the-overall-study-plan-and-individual-subjects",
+      "featureTitle": "Create a progress tracker that displays percentage completion for the overall study plan and individual subjects",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SubjectProgressCard.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-motivational-quote-section-that-displays-student-focused-motivational-quotes",
+      "featureTitle": "Add a motivational quote section that displays student-focused motivational quotes",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/data/quotes.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-design-the-application-with-a-beautiful-student-friendly-aesthetic-using-soft-colors-throughout-the-interface",
+      "featureTitle": "Design the application with a beautiful, student-friendly aesthetic using soft colors throughout the interface",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-entire-application-is-fully-responsive-and-optimized-for-mobile-devices-tablets-and-desktop-screens",
+      "featureTitle": "Ensure the entire application is fully responsive and optimized for mobile devices, tablets, and desktop screens",
+      "files": [
+        "frontend/src/components/Navigation.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-cohesive-visual-theme-with-a-warm-educational-aesthetic-using-soft-pastels-or-earth-tones-rounded-corners-gentle-shadows-and-calming-typography-that-creates-a-focused-stress-free-study-environment",
+      "featureTitle": "Apply a cohesive visual theme with a warm, educational aesthetic using soft pastels or earth tones, rounded corners, gentle shadows, and calming typography that creates a focused, stress-free study environment",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

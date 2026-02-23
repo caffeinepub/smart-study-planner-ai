@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component with TanStack Router setup, defining routes for home, create plan, progress, and motivation pages, wrapped with ThemeProvider and Toaster.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component that provides consistent structure with Navigation, main content area via Outlet, and Footer across all pages.",
+  "frontend/src/components/Navigation.tsx": "Responsive navigation bar with logo, desktop menu, and mobile hamburger menu that highlights the active route.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying copyright information and attribution link to caffeine.ai with UTM tracking.",
+  "frontend/src/pages/HomePage.tsx": "Hero landing page with gradient background, feature cards showcasing AI-powered planning capabilities, and call-to-action buttons.",
+  "frontend/src/pages/StudyPlanForm.tsx": "Form page for creating study plans where users input subjects, exam dates, difficulty levels, and daily study hours, then generates an AI-optimized schedule.",
+  "frontend/src/pages/ProgressTracker.tsx": "Progress tracking page displaying overall completion rate, session statistics, upcoming sessions, and per-subject progress cards.",
+  "frontend/src/pages/MotivationalQuotes.tsx": "Motivational quotes page with random quote display, refresh functionality, and grid of additional quotes for inspiration.",
+  "frontend/src/components/SubjectProgressCard.tsx": "Card component showing individual subject progress with completion percentage, progress bar, and button to mark sessions complete.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for fetching sessions and completion rate from backend, plus mutations for adding and completing study sessions.",
+  "frontend/src/types/studyPlan.ts": "TypeScript type definitions for study plan data structures including SubjectInput, StudySession, and StudyPlan.",
+  "frontend/src/lib/studyPlanGenerator.ts": "Client-side AI algorithm that generates optimized study schedules based on exam dates, difficulty levels, and available study time with strategic revision days.",
+  "frontend/src/data/quotes.ts": "Collection of 20 motivational quotes focused on studying, learning, and academic success with authors.",
+  "frontend/src/index.css": "Global styles with OKLCH color system featuring soft, calming colors (blues, teals, peaches) optimized for a student-friendly study environment in both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom soft color palette, rounded corners, gentle shadows, and serif font family for quotes."
+}

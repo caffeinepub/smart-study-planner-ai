@@ -1,2 +1,3 @@
-# smart-study-planner-ai
-Exported from Caffeine project: Smart Study Planner AI
+## Smart Study Planner AI
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

@@ -1,0 +1,175 @@
+{
+  "kind": "build_request",
+  "title": "Create Smart Study Planner AI with schedule generation and progress tracking",
+  "projectName": "Smart Study Planner AI",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a clean homepage with a title displaying 'Smart Study Planner AI', a tagline describing the AI-powered study planning functionality, and a navigation bar for site sections",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "A clean homepage with a title, tagline, and navigation bar"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Homepage displays 'Smart Study Planner AI' as the main title",
+        "Tagline clearly describes the AI study planning purpose",
+        "Navigation bar is present and functional"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create an input form where students can enter: subjects (multiple), exam date for each subject, daily available study hours, and difficulty level for each subject",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "A form where students can enter: Subjects, Exam date, Daily available study hours, Difficulty level of each subject"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form accepts multiple subjects with individual exam dates",
+        "Daily available study hours input is present",
+        "Difficulty level selector is available for each subject",
+        "Form validates all required fields before submission"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement an AI-based study schedule generator that automatically divides subjects based on priority and exam date, generates daily study tasks, and suggests revision days",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "An AI-based study schedule generator that: Automatically divides subjects based on priority and exam date, Gives daily tasks, Suggests revision days"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Algorithm prioritizes subjects based on exam proximity and difficulty level",
+        "Daily study tasks are generated based on available study hours",
+        "Revision days are strategically placed before exam dates",
+        "Schedule adapts to the number of days until each exam"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Create a progress tracker that displays percentage completion for the overall study plan and individual subjects",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "A progress tracker with percentage completion"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Progress tracker shows overall completion percentage",
+        "Individual subject progress is tracked and displayed",
+        "Progress updates as tasks are marked complete",
+        "Visual representation (progress bar or similar) is clear and intuitive"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add a motivational quote section that displays student-focused motivational quotes",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "A motivational quote section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Motivational quotes are displayed in a dedicated section",
+        "Quotes are relevant to studying and student motivation",
+        "Quote section is visually distinct and appealing"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Design the application with a beautiful, student-friendly aesthetic using soft colors throughout the interface",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "A beautiful, student-friendly design with soft colors"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color palette uses soft, non-harsh colors suitable for extended viewing",
+        "Design is clean, modern, and appealing to students",
+        "Visual hierarchy guides users naturally through the interface",
+        "Typography is readable and professional"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Ensure the entire application is fully responsive and optimized for mobile devices, tablets, and desktop screens",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Mobile responsive layout"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Layout adapts seamlessly to mobile, tablet, and desktop screen sizes",
+        "All interactive elements are touch-friendly on mobile devices",
+        "Text remains readable at all breakpoints",
+        "Navigation is accessible on all device sizes"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Apply a cohesive visual theme with a warm, educational aesthetic using soft pastels or earth tones, rounded corners, gentle shadows, and calming typography that creates a focused, stress-free study environment",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visual theme is consistently applied across all pages and components",
+        "Color scheme evokes calm and focus appropriate for a study tool",
+        "Design elements support usability without distraction"
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must use Motoko within a single-actor architecture",
+    "Frontend must use React with TypeScript, Tailwind CSS, and React Query",
+    "Do not modify immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui"
+  ],
+  "nonGoals": [
+    "Integration with external AI services like OpenAI or Anthropic",
+    "Real-time collaboration features",
+    "Email or SMS notifications",
+    "Third-party authentication beyond Internet Identity",
+    "Mobile native apps"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Hero background image with soft gradient and subtle study-related icons or patterns suitable for education (hero-bg.dim_1920x1080.png)",
+      "Brain or lightbulb icon representing AI intelligence in a minimal, friendly style (ai-icon.dim_128x128.png)",
+      "Calendar icon for exam date scheduling in soft colors (calendar-icon.dim_128x128.png)",
+      "Progress chart or checkmark icon for the progress tracker (progress-icon.dim_128x128.png)"
+    ],
+    "edits": []
+  }
+}
